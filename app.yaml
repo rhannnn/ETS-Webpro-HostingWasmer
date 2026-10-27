@@ -1,0 +1,26 @@
+   kind: wasmer.io/App.v0
+   owner: rhannnn
+   name: ets-webpro
+   package: .
+   debug: false
+   env:
+     APP_NAME: SurabayaPrestige
+     APP_ENV: production
+     APP_DEBUG: "false"
+     APP_KEY: "base64:PJtv0gZydfA2WbfknsLv7CJmll08HPS5CUnFxH4+R1A="
+     APP_URL: "https://ets-webpro.wasmer.app"
+     DB_CONNECTION: mysql
+     SESSION_DRIVER: database
+     CACHE_STORE: array
+     QUEUE_CONNECTION: sync
+     LOG_CHANNEL: stderr
+     VIEW_COMPILED_PATH: /tmp/views
+   capabilities:
+     database:
+       engine: mysql
+   volumes:
+     - name: uploads
+       mount: /app/public/storage
+   scaling:
+     mode: single_concurrency
+   app_id: da_KgYIZt9Up9Xr
